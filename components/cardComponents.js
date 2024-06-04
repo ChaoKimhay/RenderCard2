@@ -3,7 +3,7 @@ export const cardComponent = (product) => {
           <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-[200px]">
             <img
               src=${
-                product?.image ||
+                product?.imageUrl ||
                 "https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary.svg"
               }
               alt="card-image" class="object-cover w-full h-full" />
@@ -11,10 +11,10 @@ export const cardComponent = (product) => {
           <div class="p-6">
             <div class="flex items-center justify-between mb-2">
               <p class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
-                ${product?.title || "Untitle Product"}
+                ${product?.name || "Untitle Product"}
               </p>
               <p class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900">
-                $${product?.price || "Unknow"}
+                $${product?.originPrice || "Unknow"}
               </p>
             </div>
           </div>
